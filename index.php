@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+// tandai user
+define("BASEPATH", true);
+?>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,17 +40,11 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/signin.css" rel="stylesheet">
 </head>
+<?php
+include_once 'proses_login.php';
+?>
+
 <body class="text-center">
-    <php
-    // tandai user
-    define("BASEPATH", true);
-    
-    >
-    
-    <php
-    include_once 'proses_login.php';
-    >
-    
     <main class="form-signin">
         <form method="post">
             <h1 class="h3 mb-3 fw-normal">Login User</h1>
@@ -63,9 +60,11 @@
             <a class=" btn btn-lg btn-danger" href="register.php" type="submit">Daftar</a>
 
         </form>
-        <php
+        <?php
         require_once 'proses_login.php';
-        >
+        ?>
     </main>
+
 </body>
+
 </html>
